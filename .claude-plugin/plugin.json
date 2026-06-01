@@ -1,0 +1,24 @@
+{
+  "name": "akka-dex",
+  "displayName": "AKKA Finance DEX Aggregator",
+  "version": "1.0.0",
+  "description": "Swap tokens across 25+ DEXes on 7 EVM chains via AKKA Finance aggregator. Get quotes, compare prices, and build unsigned swap transactions.",
+  "icon": "https://akka.finance/favicon.ico",
+  "publisher": "akka-finance",
+  "license": "MIT",
+  "repository": "https://github.com/Akka-Finance/akka-mcp-server",
+  "mcpServers": {
+    "akka-dex": {
+      "command": "npx",
+      "args": ["-y", "@akka-finance/mcp-server"],
+      "env": {
+        "AKKA_API_BASE": "https://api.akka.finance"
+      }
+    }
+  },
+  "skills": [
+    "skills/akka-swap.md"
+  ],
+  "categories": ["defi", "blockchain", "finance"],
+  "keywords": ["dex", "swap", "defi", "evm", "aggregator", "akka"]
+}

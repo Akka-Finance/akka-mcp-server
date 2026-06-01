@@ -1,0 +1,71 @@
+{
+  "name": "io.github.Akka-Finance/mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for AKKA Finance DEX aggregator — swap quotes, routes, and execution across 7 EVM chains with 25+ DEXes",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Akka-Finance/akka-mcp-server"
+  },
+  "homepage": "https://akka.finance",
+  "license": "MIT",
+  "runtime": "node",
+  "command": {
+    "npx": {
+      "package": "@akka-finance/mcp-server",
+      "args": []
+    }
+  },
+  "transport": ["stdio", "streamable-http"],
+  "environment_variables": [
+    {
+      "name": "AKKA_API_BASE",
+      "description": "Base URL of the AKKA Finance API",
+      "required": false,
+      "default": "https://api.akka.finance"
+    },
+    {
+      "name": "AKKA_API_KEY",
+      "description": "API key for AKKA Finance API (if required)",
+      "required": false
+    }
+  ],
+  "tools": [
+    {
+      "name": "akka_get_quote",
+      "description": "Get the best swap quote across 25+ DEXes"
+    },
+    {
+      "name": "akka_get_swap",
+      "description": "Build an unsigned swap transaction"
+    },
+    {
+      "name": "akka_dex_compare",
+      "description": "Compare quotes across individual DEX pools"
+    },
+    {
+      "name": "akka_get_spender",
+      "description": "Get the router contract address for token approval"
+    },
+    {
+      "name": "akka_get_approve_tx",
+      "description": "Build an ERC-20 approve transaction"
+    },
+    {
+      "name": "akka_check_allowance",
+      "description": "Check current token spending allowance"
+    },
+    {
+      "name": "akka_list_tokens",
+      "description": "List tradeable tokens on a chain"
+    },
+    {
+      "name": "akka_get_token",
+      "description": "Get token details by contract address"
+    },
+    {
+      "name": "akka_list_chains",
+      "description": "List all supported blockchain networks"
+    }
+  ],
+  "categories": ["Finance", "Blockchain", "DeFi"]
+}
