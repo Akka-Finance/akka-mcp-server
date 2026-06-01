@@ -1,17 +1,17 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.Akka-Finance/mcp-server",
-  "description": "MCP server for AKKA Finance DEX aggregator — swap quotes, routes, and execution across EVM chains with 25+ DEXes",
+  "description": "MCP server for AKKA Finance DEX aggregator — swap quotes, routes, and execution",
   "repository": {
     "url": "https://github.com/Akka-Finance/akka-mcp-server",
     "source": "github"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "packages": [
     {
       "registryType": "npm",
       "identifier": "@akka-finance/mcp-server",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "transport": {
         "type": "stdio"
       },
