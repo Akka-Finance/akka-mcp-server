@@ -12,7 +12,7 @@ export const swapTool: ToolSpec = {
     'the transaction. Use akka_get_quote first to check the expected output amount.',
   inputSchema: {
     chainId: z.number().int().positive().describe(
-      'Chain ID (999=HyperEVM, 1116=Core, 50=XDC, 223=B2, 200901=Bitlayer, 4200=Merlin, 60808=BOB)',
+      'Chain ID (999=HyperEVM, 1=Ethereum, 8453=Base, 42161=Arbitrum, 56=BNB Chain)',
     ),
     src: z.string().describe(
       'Source token address (0xeee...eee for native token)',

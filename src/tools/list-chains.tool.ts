@@ -5,12 +5,10 @@ import type { ChainInfo } from '../client/types.js';
 
 const SUPPORTED_CHAINS: ChainInfo[] = [
   { chainId: 999, name: 'HyperEVM (Hyperliquid)', nativeSymbol: 'HYPE' },
-  { chainId: 1116, name: 'Core', nativeSymbol: 'CORE' },
-  { chainId: 50, name: 'XDC Network', nativeSymbol: 'XDC' },
-  { chainId: 223, name: 'B2 Network', nativeSymbol: 'BTC' },
-  { chainId: 200901, name: 'Bitlayer', nativeSymbol: 'BTC' },
-  { chainId: 4200, name: 'Merlin', nativeSymbol: 'BTC' },
-  { chainId: 60808, name: 'BOB', nativeSymbol: 'ETH' },
+  { chainId: 1, name: 'Ethereum', nativeSymbol: 'ETH' },
+  { chainId: 8453, name: 'Base', nativeSymbol: 'ETH' },
+  { chainId: 42161, name: 'Arbitrum', nativeSymbol: 'ETH' },
+  { chainId: 56, name: 'BNB Chain', nativeSymbol: 'BNB' },
 ];
 
 export const listChainsTool: ToolSpec = {

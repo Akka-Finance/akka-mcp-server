@@ -5,7 +5,6 @@ MCP server for the [AKKA Finance](https://akka.finance) DEX aggregator — swap 
 [![npm version](https://img.shields.io/npm/v/@akka-finance/mcp-server)](https://www.npmjs.com/package/@akka-finance/mcp-server)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-<a href="https://glama.ai/mcp/servers"><img width="380" height="200" alt="AKKA Finance MCP server" src="https://glama.ai/mcp/servers/badge" /></a>
 
 ## Install
 
@@ -82,12 +81,10 @@ Add to `.vscode/mcp.json`:
 | Chain ID | Network | Native Token |
 |----------|---------|-------------|
 | 999 | HyperEVM (Hyperliquid) | HYPE |
-| 1116 | Core | CORE |
-| 50 | XDC Network | XDC |
-| 223 | B2 Network | BTC |
-| 200901 | Bitlayer | BTC |
-| 4200 | Merlin | BTC |
-| 60808 | BOB | ETH |
+| 1 | Ethereum | ETH |
+| 8453 | Base | ETH |
+| 42161 | Arbitrum | ETH |
+| 56 | BNB Chain | BNB |
 
 ## Configuration
 
