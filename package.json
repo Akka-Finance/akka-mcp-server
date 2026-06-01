@@ -1,6 +1,7 @@
 {
   "name": "@akka-finance/mcp-server",
   "version": "1.0.0",
+  "mcpName": "io.github.Akka-Finance/mcp-server",
   "description": "MCP server for AKKA DEX aggregator — swap quotes, routes, and execution across EVM chains",
   "type": "module",
   "bin": {
