@@ -25,7 +25,7 @@ export class AkkaApiError extends Error {
 
 export class AkkaClient {
   private readonly baseUrl: string;
-  private readonly apiKey?: string;
+  private readonly apiKey: string;
   private readonly timeout: number;
 
   constructor(config: Config) {
@@ -37,10 +37,9 @@ export class AkkaClient {
 
   private async request<T>(path: string, retries = 1): Promise<T> {
     const url = `${this.baseUrl}${path}`;
-    const headers: Record<string, string> = {};
-    if (this.apiKey) {
-      headers['apikey'] = this.apiKey;
-    }
+    const headers: Record<string, string> = {
+      apikey: this.apiKey,
+    };
 
     let lastError: Error | undefined;
     for (let attempt = 0; attempt <= retries; attempt++) {

@@ -2,7 +2,7 @@ import { parseArgs } from 'node:util';
 
 export interface Config {
   apiBase: string;
-  apiKey?: string;
+  apiKey: string;
   transport: 'stdio' | 'http';
   port: number;
   timeout: number;
@@ -10,7 +10,7 @@ export interface Config {
 
 const DEFAULTS: Config = {
   apiBase: 'https://api.akka.finance',
-  apiKey: undefined,
+  apiKey: '',
   transport: 'stdio',
   port: 3100,
   timeout: 15000,
@@ -43,7 +43,7 @@ export function loadConfig(): Config {
     apiKey:
       apiKey ??
       process.env.AKKA_API_KEY ??
-      DEFAULTS.apiKey,
+      (DEFAULTS.apiKey || (() => { throw new Error('AKKA_API_KEY is required. Get one at https://docs.akka.finance/authentication and set it via --api-key flag or AKKA_API_KEY env variable.'); })()),
     transport:
       (transport as 'stdio' | 'http') ??
       (process.env.AKKA_MCP_TRANSPORT as 'stdio' | 'http') ??

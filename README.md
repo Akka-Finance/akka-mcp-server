@@ -6,6 +6,10 @@ MCP server for the [AKKA Finance](https://akka.finance) DEX aggregator — swap 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 
+## Prerequisites
+
+An AKKA API key is required. Get one at [docs.akka.finance/authentication](https://docs.akka.finance/authentication).
+
 ## Install
 
 ### Claude Desktop
@@ -19,7 +23,7 @@ Add to `claude_desktop_config.json`:
       "command": "npx",
       "args": ["-y", "@akka-finance/mcp-server"],
       "env": {
-        "AKKA_API_BASE": "https://api.akka.finance"
+        "AKKA_API_KEY": "your-api-key"
       }
     }
   }
@@ -29,7 +33,7 @@ Add to `claude_desktop_config.json`:
 ### Claude Code
 
 ```bash
-claude mcp add akka-dex -- npx -y @akka-finance/mcp-server
+claude mcp add akka-dex -e AKKA_API_KEY=your-api-key -- npx -y @akka-finance/mcp-server
 ```
 
 ### Cursor
@@ -41,7 +45,10 @@ Add to `.cursor/mcp.json`:
   "mcpServers": {
     "akka-dex": {
       "command": "npx",
-      "args": ["-y", "@akka-finance/mcp-server"]
+      "args": ["-y", "@akka-finance/mcp-server"],
+      "env": {
+        "AKKA_API_KEY": "your-api-key"
+      }
     }
   }
 }
@@ -56,7 +63,10 @@ Add to `.vscode/mcp.json`:
   "servers": {
     "akka-dex": {
       "command": "npx",
-      "args": ["-y", "@akka-finance/mcp-server"]
+      "args": ["-y", "@akka-finance/mcp-server"],
+      "env": {
+        "AKKA_API_KEY": "your-api-key"
+      }
     }
   }
 }
@@ -93,7 +103,7 @@ Configuration via environment variables or CLI arguments:
 | Env Variable | CLI Arg | Default | Description |
 |-------------|---------|---------|-------------|
 | `AKKA_API_BASE` | `--api-base` | `https://api.akka.finance` | AKKA API base URL |
-| `AKKA_API_KEY` | `--api-key` | — | API key (if required) |
+| `AKKA_API_KEY` | `--api-key` | **required** | API key for AKKA Finance API |
 | `AKKA_MCP_TRANSPORT` | `--transport` | `stdio` | Transport: `stdio` or `http` |
 | `AKKA_MCP_PORT` | `--port` | `3100` | Port for HTTP transport |
 | `AKKA_TIMEOUT` | `--timeout` | `15000` | Request timeout in ms |
